@@ -1,18 +1,24 @@
 import axios from "axios";
+import { useState } from "react";
 import MovieCard from "components/MovieCard";
 import Pagination from "components/Pagination";
 import { BASE_URL } from "utils/requests";
+import { MoviePage } from "types/movie";
 
 function Listing() {
 
+    const [pageNumber, setPageNumber] = useState(0);
+
 // FORMA ERRADA
     axios.get(`${BASE_URL}/movies?size=12&page=0`).then(response => {
-        console.log(response.data)
+        const data = response.data as MoviePage;
+        setPageNumber(data.number)
     } )
 
     return (
         <>
             <Pagination />
+            <p>{pageNumber}</p>
 
             <div className="container">
                 <div className="row">
