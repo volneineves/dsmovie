@@ -1,6 +1,6 @@
 # DSMovie
 
-DSMovie é uma aplicação full stack web construída durante a semana [Spring React](https://devsuperior.com).
+DSMovie é uma aplicação full stack web construída durante a semana [Spring React](https://devsuperior.com.br).
 
 # Technologies used
 ## Back end
